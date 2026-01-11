@@ -16,7 +16,7 @@ tools {
  stage('Install Dependencies') {
       steps {
 
-        sh 'npm clean install'
+        sh 'npm ci'
       }
     }
 
