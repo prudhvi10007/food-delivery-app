@@ -27,6 +27,13 @@ tools {
       }
     }
 
+stage('Docker Cleanup') {
+  steps {
+    sh 'docker system prune -af --volumes || true'
+    sh 'docker builder prune -af || true'
+  }
+}
+
 
     stage('Docker Build and Push') {
       steps {
